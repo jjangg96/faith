@@ -85,7 +85,7 @@ func DefaultConfig() network.Config {
 		GenesisState:  app.ModuleBasics.DefaultGenesis(encoding.Marshaler),
 		TimeoutCommit: 2 * time.Second,
 		ChainID:       "chain-" + tmrand.NewRand().Str(6),
-		// Some changes are introduced to make the tests run as if strange-chain is a standalone chain.
+		// Some changes are introduced to make the tests run as if strange is a standalone chain.
 		// This will only work if NumValidators is set to 1.
 		NumValidators:   1,
 		BondDenom:       sdk.DefaultBondDenom,

@@ -11,10 +11,10 @@ import (
 
 func main() {
 	rootCmd, _ := cmd.NewRootCmd(
-		"strange-chain",
+		"strange",
 		"cosmos",
 		app.DefaultNodeHome,
-		"strange-chain-1",
+		"strange-1",
 		app.ModuleBasics,
 		app.New,
 		// this line is used by starport scaffolding # root/arguments

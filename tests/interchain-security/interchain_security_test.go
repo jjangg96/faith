@@ -37,7 +37,7 @@ func TestCCVTestSuite(t *testing.T) {
 	suite.Run(t, ccvSuite)
 }
 
-// NewCoordinator initializes Coordinator with interchain security dummy provider and strange-chain consumer chain
+// NewCoordinator initializes Coordinator with interchain security dummy provider and strange consumer chain
 func NewProviderConsumerCoordinator(t *testing.T) (*ibctesting.Coordinator, *ibctesting.TestChain, *ibctesting.TestChain) {
 	coordinator := icssimapp.NewBasicCoordinator(t)
 	chainID := ibctesting.GetChainID(1)

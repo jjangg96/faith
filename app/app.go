@@ -94,7 +94,7 @@ import (
 
 const (
 	AccountAddressPrefix = "cosmos"
-	Name                 = "strange-chain"
+	Name                 = "strange"
 )
 
 // this line is used by starport scaffolding # stargate/wasm/app/enabledProposals
