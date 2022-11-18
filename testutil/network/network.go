@@ -25,9 +25,9 @@ import (
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	ccvconsumertypes "github.com/cosmos/interchain-security/x/ccv/consumer/types"
-	"github.com/strangelove-ventures/strange-chain/app"
-	"github.com/strangelove-ventures/strange-chain/cmd"
-	"github.com/strangelove-ventures/strange-chain/testutil"
+	"github.com/strangelove-ventures/strange/app"
+	"github.com/strangelove-ventures/strange/cmd"
+	"github.com/strangelove-ventures/strange/testutil"
 	types1 "github.com/tendermint/tendermint/abci/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 )

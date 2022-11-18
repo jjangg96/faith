@@ -1,4 +1,4 @@
-module github.com/strangelove-ventures/strange-chain
+module github.com/strangelove-ventures/strange
 
 go 1.18
 
