@@ -16,7 +16,7 @@ make install
 Come up with a moniker for your node, then run:
 
 ```
-strange-chaind init $MONIKER
+stranged init $MONIKER
 ```
  
  
@@ -28,11 +28,11 @@ To launch as a consumer chain, download and save shared genesis file to `~/.stra
 To instead launch as a standalone, single node chain, run:
 
 ```
-strange-chaind add-consumer-section
+stranged add-consumer-section
 ```
 
 ## Launch node
 
 ```
-strange-chaind start
+stranged start
 ```
