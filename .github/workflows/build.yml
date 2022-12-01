@@ -1,0 +1,40 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Compile Faith
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: [amd64]
+        targetos: [darwin, linux]
+        include:
+          - targetos: darwin
+            arch: arm64
+    name: osmosis ${{ matrix.arch }} for ${{ matrix.targetos }}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-go@v3
+      with:
+        go-version: '^1.18'
+      env:
+        GOOS: ${{ matrix.targetos }}
+        GOARCH: ${{ matrix.arch }}
+    - name: Compile Faith
+      run: |
+        go mod download
+        cd cmd/faithd
+        go build .
+    - uses: actions/upload-artifact@v2
+      with:
+        name: faithd ${{ matrix.targetos }} ${{ matrix.arch }}
+        path: cmd/faithd/faithd
