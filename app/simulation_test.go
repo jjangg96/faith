@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/strangelove-ventures/strange/app"
-	"github.com/strangelove-ventures/strange/cmd"
+	"github.com/jjangg96/faith/app"
+	"github.com/jjangg96/faith/cmd"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/codec"

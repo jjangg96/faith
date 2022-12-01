@@ -1,4 +1,4 @@
-module github.com/strangelove-ventures/strange
+module github.com/jjangg96/faith
 
 go 1.18
 

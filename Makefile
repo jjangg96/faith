@@ -12,8 +12,8 @@ ifeq (,$(VERSION))
   endif
 endif
 
-CHAIN_NAME = strange
-DAEMON_NAME = stranged
+CHAIN_NAME = faith
+DAEMON_NAME = faithd
 
 LEDGER_ENABLED ?= true
 TM_VERSION := $(shell go list -m github.com/tendermint/tendermint | sed 's:.* ::') # grab everything after the space in "github.com/tendermint/tendermint v0.34.7"

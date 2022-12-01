@@ -25,9 +25,9 @@ import (
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	ccvconsumertypes "github.com/cosmos/interchain-security/x/ccv/consumer/types"
-	"github.com/strangelove-ventures/strange/app"
-	"github.com/strangelove-ventures/strange/cmd"
-	"github.com/strangelove-ventures/strange/testutil"
+	"github.com/jjangg96/faith/app"
+	"github.com/jjangg96/faith/cmd"
+	"github.com/jjangg96/faith/testutil"
 	types1 "github.com/tendermint/tendermint/abci/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
@@ -85,7 +85,7 @@ func DefaultConfig() network.Config {
 		GenesisState:  app.ModuleBasics.DefaultGenesis(encoding.Marshaler),
 		TimeoutCommit: 2 * time.Second,
 		ChainID:       "chain-" + tmrand.NewRand().Str(6),
-		// Some changes are introduced to make the tests run as if strange is a standalone chain.
+		// Some changes are introduced to make the tests run as if faith is a standalone chain.
 		// This will only work if NumValidators is set to 1.
 		NumValidators:   1,
 		BondDenom:       sdk.DefaultBondDenom,

@@ -142,7 +142,7 @@ func NewRootCmd(
 
 	rootCmd := &cobra.Command{
 		Use:   appName + "d",
-		Short: "Strangelove has a strange sort of love for ICS",
+		Short: "These three remain: faith, hope and love. But the greatest of these is love.",
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			// set the default command outputs
 			cmd.SetOut(cmd.OutOrStdout())
