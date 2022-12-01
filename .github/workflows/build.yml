@@ -32,10 +32,8 @@ jobs:
         GOARCH: ${{ matrix.arch }}
     - name: Compile Faith
       run: |
-        go mod download
-        cd cmd/faithd
-        go build .
+        make build
     - uses: actions/upload-artifact@v2
       with:
-        name: faithd ${{ matrix.targetos }} ${{ matrix.arch }}
-        path: cmd/faithd/faithd
+        name: faithd-${{ matrix.targetos }}-${{ matrix.arch }}
+        path: build/faithd
